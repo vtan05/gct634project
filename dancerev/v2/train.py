@@ -84,7 +84,7 @@ def main():
                         default='checkpoints/layers2_win100_schedule100_condition10_detach')
 
     parser.add_argument('--epoch', type=int, default=10000)
-    parser.add_argument('--batch_size', type=int, default=2)
+    parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--save_per_epochs', type=int, metavar='N', default=500)
     parser.add_argument('--log_per_updates', type=int, metavar='N', default=1,
                         help='log model loss per x updates (mini-batches).')
@@ -101,14 +101,14 @@ def main():
     parser.add_argument('--d_k', type=int, default=64)
     parser.add_argument('--d_v', type=int, default=64)
     parser.add_argument('--n_head', type=int, default=8)
-    parser.add_argument('--n_layers', type=int, default=1)
+    parser.add_argument('--n_layers', type=int, default=2)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--dropout', type=float, default=0.1)
 
     parser.add_argument('--seq_len', type=int, default=900)
     parser.add_argument('--max_seq_len', type=int, default=4500)
     parser.add_argument('--condition_step', type=int, default=10)
-    parser.add_argument('--sliding_windown_size', type=int, default=50)
+    parser.add_argument('--sliding_windown_size', type=int, default=100)
     parser.add_argument('--lambda_v', type=float, default=0.01)
 
     parser.add_argument('--cuda', type=str2bool, nargs='?', metavar='BOOL', const=True,
